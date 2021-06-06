@@ -1,0 +1,76 @@
+body {
+  font-family: sans-serif;
+   width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: #BBDEFB;
+}
+.wrap {
+  /*position: absolute;*/
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_title{
+  /*position: relative;*/
+  
+  display: flex;
+ justify-content: center;
+flex-direction: row;
+
+
+}
+
+.bl1{
+
+  background-color: #338998;
+  align-self: stretch;
+  flex-basis: 304px;
+}
+.bl2{
+  background-color: green;
+  
+  flex-basis: 304px;
+  align-self: stretch;
+}
+.bl3{
+  background-color: #4B8BF4;
+  
+  flex-basis: 304px;
+  align-self: stretch;
+}
+
+
+.card {
+
+  width: 300px;
+  height: 300px;
+  position: relative;
+  perspective: 1000px;
+  margin-right: 5px;
+  box-shadow: 5px 5px 4px #333; 
+}
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  backface-visibility: hidden;
+  border-radius: 5px;
+}
+.front {
+  background-color: #fff;
+}
+.back {
+  background-color: #BDBDBD;
+  transform: rotateY(180deg);
+}
+.card:hover .front {transform: rotateY(180deg);}
+.card:hover .back {transform: rotateY(360deg);}
